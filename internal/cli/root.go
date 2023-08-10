@@ -42,7 +42,7 @@ func rootCommandPersistentPreRunE(cmd *cobra.Command, args []string) error {
 		Transport: transport,
 	}
 
-	client := clickup.NewClient(httpClient, viper.GetString("api_key"))
+	client := clickup.NewClient(httpClient, viper.GetString("api_token"))
 
 	ctx := cmd.Context()
 	ctx = context.WithValue(ctx, constant.TransportContextKey, transport)
