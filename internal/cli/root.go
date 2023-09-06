@@ -7,6 +7,7 @@ import (
 	"runtime/debug"
 
 	"github.com/moutend/clickupctl/internal/cache"
+	"github.com/moutend/clickupctl/internal/cli/checklist"
 	"github.com/moutend/clickupctl/internal/cli/list"
 	"github.com/moutend/clickupctl/internal/cli/space"
 	"github.com/moutend/clickupctl/internal/cli/task"
@@ -62,6 +63,7 @@ func init() {
 		RootCommand.Version = "undefined"
 	}
 
+	RootCommand.AddCommand(checklist.Command)
 	RootCommand.AddCommand(list.Command)
 	RootCommand.AddCommand(space.Command)
 	RootCommand.AddCommand(task.Command)
