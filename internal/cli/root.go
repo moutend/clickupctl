@@ -8,6 +8,7 @@ import (
 
 	"github.com/moutend/clickupctl/internal/cache"
 	"github.com/moutend/clickupctl/internal/cli/checklist"
+	"github.com/moutend/clickupctl/internal/cli/folder"
 	"github.com/moutend/clickupctl/internal/cli/list"
 	"github.com/moutend/clickupctl/internal/cli/space"
 	"github.com/moutend/clickupctl/internal/cli/task"
@@ -64,6 +65,7 @@ func init() {
 	}
 
 	RootCommand.AddCommand(checklist.Command)
+	RootCommand.AddCommand(folder.Command)
 	RootCommand.AddCommand(list.Command)
 	RootCommand.AddCommand(space.Command)
 	RootCommand.AddCommand(task.Command)
